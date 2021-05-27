@@ -19,4 +19,4 @@ Please follow the link:
 
 ### Interested in how the repository was structured?
 Please follow the link:
-[How this Project was created](how-to-create.md)
+[How this project was created](how-to-create.md)
