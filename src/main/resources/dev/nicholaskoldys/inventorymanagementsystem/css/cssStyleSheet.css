@@ -1,0 +1,58 @@
+/*
+Style Sheet for Western Governors University - Software Development Project - generic Inventory Management System
+written in Java by Nicholas Koldys
+
+This css file is applied to each Parent node on the the specified scenes in each fxml document.  This allows seperation of fxml and style (UX-design) so it can be changed by not only the original software developer but design specialists to suit their specific needs.
+
+PS. Most parent nodes are of type VBox.
+*/
+
+/*
+add to fxml:
+
+styleClass or id
+
+.styleClassname
+
+or
+
+#idNameNotFXID
+*/
+
+.parentNode {
+    -fx-background-color: lightgrey;
+    -fx-min-width: 1200px;
+    -fx-min-height: 600px;
+    -fx-padding: 15px;
+}
+
+.parentNode2 {
+    /*-fx-padding: 15px;*/
+    /*-fx-border-color: black;*/
+}
+
+.parentNode3 {
+    -fx-padding: 15px;
+    -fx-min-width: 600px;
+    -fx-border-color: black;
+    -fx-border-radius: 5px;
+    -fx-margin: 10px;
+}
+
+.largeButton {
+    -fx-alignment: center;
+    -fx-min-width: 100px;
+}
+
+.mainTitle {
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-font-color: blue;
+}
+
+.sectionTitle {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+
+    -fx-padding: 10px;
+}

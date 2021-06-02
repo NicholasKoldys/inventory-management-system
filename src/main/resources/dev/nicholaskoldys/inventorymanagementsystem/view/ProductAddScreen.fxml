@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="700.0" prefWidth="1205.0" style="-fx-background-color: lightgrey; -fx-border-color: grey;" xmlns="http://javafx.com/javafx/8.0.221" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.nicholaskoldys.inventorymanagementsystem.controller.ProductAddSceneController">
+	<children>
+      <HBox>
+         <children>
+              <Label fx:id="titleLabel" prefHeight="35.0" prefWidth="185.0" text="Add Product">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></Label>
+            <HBox alignment="CENTER" prefHeight="35.0" prefWidth="814.0">
+               <children>
+                  <Button fx:id="searchButton" minWidth="100.0" onAction="#searchButtonAction" text="Search">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="partsSearchTextField" onMouseClicked="#fieldSelectedAction" text="Part ID | Name">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <SplitPane dividerPositions="0.36261843238587427">
+         <items>
+            <VBox>
+               <children>
+                  <SplitPane dividerPositions="0.2803738317757009" prefHeight="832.0" prefWidth="324.0">
+                     <items>
+                        <VBox alignment="CENTER_LEFT" prefWidth="237.0">
+                           <children>
+                              <Label text="ID">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font></Label>
+                              <Label text="Name">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font></Label>
+                              <Label text="Inv">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font></Label>
+                              <Label text="Price">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font></Label>
+                              <Label text="Max">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT">
+                           <children>
+                              <TextField fx:id="idField" onMouseClicked="#fieldSelectedAction" text="Auto Gen - Disabled">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding></TextField>
+                              <TextField fx:id="productNameField" onMouseClicked="#fieldSelectedAction" text="Product Name">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding></TextField>
+                              <TextField fx:id="invField" onMouseClicked="#fieldSelectedAction" text="Inv">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding></TextField>
+                              <TextField fx:id="priceField" onMouseClicked="#fieldSelectedAction" text="Price">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding></TextField>
+                              <HBox>
+                                 <children>
+                                    <TextField fx:id="maxField" onMouseClicked="#fieldSelectedAction" prefHeight="31.0" prefWidth="100.0" text="Max">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin></TextField>
+                                    <Label alignment="CENTER" prefHeight="26.0" prefWidth="65.0" text="Min">
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin></Label>
+                                    <TextField fx:id="minField" minWidth="100.0" onMouseClicked="#fieldSelectedAction" prefHeight="31.0" prefWidth="100.0" text="Min">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin></TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </items>
+                  </SplitPane>
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <TableView fx:id="partSearchProductTable">
+                    <columns>
+                        <TableColumn fx:id="partSearchIdCol" minWidth="150.0" text="Part ID" />
+                        <TableColumn fx:id="partSearchNameCol" minWidth="200.0" text="Part Name" />
+                        <TableColumn fx:id="partSearchInvCol" minWidth="150.0" text="Inventory Level" />
+                        <TableColumn fx:id="partSearchPriceCol" minWidth="150.0" text="Price per Unit" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <Button fx:id="addButton" alignment="CENTER" minWidth="100.0" onAction="#addButtonAction" prefHeight="31.0" prefWidth="100.0" text="Add" />
+                  <TableView fx:id="partListProductTable">
+                     <columns>
+                        <TableColumn fx:id="partListIdCol" minWidth="150.0" text="Part ID" />
+                        <TableColumn fx:id="partListNameCol" minWidth="200.0" text="Part Name" />
+                        <TableColumn fx:id="partListInvCol" minWidth="150.0" text="Inventory Level" />
+                        <TableColumn fx:id="partListPriceCol" minWidth="150.0" text="Price per Unit" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <Button fx:id="deleteButton" alignment="CENTER" minWidth="100.0" onAction="#deleteButtonAction" text="Delete">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+         </items>
+      </SplitPane>
+      <HBox alignment="CENTER_RIGHT">
+         <children>
+      		<Button fx:id="saveButton" minWidth="100.0" onAction="#saveButtonAction" text="Save">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin></Button>
+      		<Button fx:id="cancelButton" minWidth="100.0" onAction="#cancelButtonAction" text="Cancel">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin></Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+	</children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox style="-fx-background-color: lightgrey;" styleClass="parentNode" xmlns="http://javafx.com/javafx/8.0.221" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.nicholaskoldys.inventorymanagementsystem.controller.MainSceneController">
+   <children>
+      <Pane>
+         <children>
+            <Label fx:id="titleLabel" styleClass="mainTitle" text="Inventory Managment System">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </Pane>
+      <HBox styleClass="parentNode2">
+         <children>
+            <VBox style="-fx-border-radius: 5; -fx-border-color: black;" styleClass="parentNode3">
+               <children>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Pane>
+                           <children>
+                              <Label fx:id="partsSectionLabel" minWidth="200.0" styleClass="sectionTitle" text="Parts">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font></Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Pane>
+                        <HBox alignment="CENTER" minWidth="400.0">
+                           <children>
+                              <Button fx:id="partsSearchButton" minWidth="100.0" onAction="#partsSearchButtonAction" styleClass="largeButton" text="Search">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin></Button>
+                              <TextField fx:id="partsSearchTextField" onMouseClicked="#fieldSelectedAction" text="Part Id | Name">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin></TextField>
+                           </children>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <TableView fx:id="partsTable" prefHeight="300.0" prefWidth="652.0">
+                    <columns>
+                      <TableColumn fx:id="partIdCol" minWidth="150.0" text="Part ID" />
+                      <TableColumn fx:id="partNameCol" minWidth="200.0" text="Part Name" />
+                      <TableColumn fx:id="partInvCol" minWidth="150.0" text="Inventory Level" />
+                      <TableColumn fx:id="partPriceCol" minWidth="150.0" text="Price/Cost per Unit" />
+                    </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_RIGHT">
+                     <children>
+                        <Button fx:id="partsAddButton" minWidth="100.0" onAction="#partsAddButtonAction" styleClass="largeButton" text="Add">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin></Button>
+                        <Button fx:id="partsModifyButton" minWidth="100.0" onAction="#partsModifyButtonAction" styleClass="largeButton" text="Modify">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin></Button>
+                        <Button fx:id="partsDeleteButton" minWidth="100.0" onAction="#partsDeleteButtonAction" styleClass="largeButton" text="Delete">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin></Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+            <VBox style="-fx-border-color: black; -fx-border-radius: 5;" styleClass="parentNode3">
+               <children>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Pane>
+                           <children>
+                              <Label fx:id="productsSectionLabel" minWidth="200.0" styleClass="sectionTitle" text="Products">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font></Label>
+                           </children>
+                        </Pane>
+                        <HBox alignment="CENTER" minWidth="400.0">
+                           <children>
+                              <Button fx:id="productsSearchButton" minWidth="100.0" onAction="#productsSearchButtonAction" styleClass="largeButton" text="Search" />
+                              <TextField fx:id="productsSearchTextField" onMouseClicked="#fieldSelectedAction" text="Product Id | Name">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin></TextField>
+                           </children>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <TableView fx:id="productsTable" prefHeight="300.0" prefWidth="652.0">
+                     <columns>
+                      <TableColumn fx:id="productIdCol" minWidth="150.0" text="Product ID" />
+                      <TableColumn fx:id="productNameCol" minWidth="200.0" text="Product Name" />
+                      <TableColumn fx:id="productInvCol" minWidth="150.0" text="Inventory Level" />
+                      <TableColumn fx:id="productPriceCol" minWidth="150.0" text="Price per Unit" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_RIGHT">
+                     <children>
+                        <Button fx:id="productsAddButton" minWidth="100.0" onAction="#productsAddButtonAction" styleClass="largeButton" text="Add">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin></Button>
+                        <Button fx:id="productsModifyButton" minWidth="100.0" onAction="#productsModifyButtonAction" styleClass="largeButton" text="Modify">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin></Button>
+                        <Button fx:id="productsDeleteButton" minWidth="100.0" onAction="#productsDeleteButtonAction" styleClass="largeButton" text="Delete">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin></Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+         <children>
+            <Button fx:id="exitButton" alignment="CENTER" minWidth="100.0" onAction="#exitButtonAction" styleClass="largeButton" text="Exit">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin></Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
