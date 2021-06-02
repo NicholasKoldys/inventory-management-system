@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="700.0" prefWidth="1205.0" style="-fx-background-color: lightgrey; -fx-border-color: grey;" xmlns="http://javafx.com/javafx/8.0.221" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.nicholaskoldys.inventorymanagementsystem.controller.ProductAddSceneController">
+<VBox prefHeight="700.0" prefWidth="1205.0" style="-fx-background-color: lightgrey; -fx-border-color: grey;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.nicholaskoldys.inventorymanagementsystem.controller.ProductAddSceneController">
 	<children>
       <HBox>
          <children>
@@ -19,20 +19,6 @@
                <font>
                   <Font name="System Bold" size="24.0" />
                </font></Label>
-            <HBox alignment="CENTER" prefHeight="35.0" prefWidth="814.0">
-               <children>
-                  <Button fx:id="searchButton" minWidth="100.0" onAction="#searchButtonAction" text="Search">
-                     <HBox.margin>
-                        <Insets right="10.0" />
-                     </HBox.margin>
-                  </Button>
-                  <TextField fx:id="partsSearchTextField" onMouseClicked="#fieldSelectedAction" text="Part ID | Name">
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
-                  </TextField>
-               </children>
-            </HBox>
          </children>
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -161,6 +147,28 @@
             </VBox>
             <VBox>
                <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="814.0">
+                     <children>
+                        <Button fx:id="searchButton" minWidth="100.0" onAction="#searchButtonAction" text="Search">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <TextField fx:id="partsSearchTextField" onMouseClicked="#fieldSelectedAction" text="Part ID | Name">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" right="5.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <Label text="Current Available Parts Selection: ">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
                   <TableView fx:id="partSearchProductTable">
                     <columns>
                         <TableColumn fx:id="partSearchIdCol" minWidth="150.0" text="Part ID" />
@@ -173,6 +181,11 @@
                      </VBox.margin>
                   </TableView>
                   <Button fx:id="addButton" alignment="CENTER" minWidth="100.0" onAction="#addButtonAction" prefHeight="31.0" prefWidth="100.0" text="Add" />
+                  <Label text="Product's Parts:">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
                   <TableView fx:id="partListProductTable">
                      <columns>
                         <TableColumn fx:id="partListIdCol" minWidth="150.0" text="Part ID" />
@@ -181,7 +194,7 @@
                         <TableColumn fx:id="partListPriceCol" minWidth="150.0" text="Price per Unit" />
                      </columns>
                      <VBox.margin>
-                        <Insets bottom="10.0" top="10.0" />
+                        <Insets bottom="10.0" />
                      </VBox.margin>
                   </TableView>
                   <Button fx:id="deleteButton" alignment="CENTER" minWidth="100.0" onAction="#deleteButtonAction" text="Delete">

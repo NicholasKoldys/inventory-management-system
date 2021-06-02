@@ -313,8 +313,10 @@ public class ProductAddSceneController implements Initializable {
 	
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
-		
-		partSearchProductTable.setItems(dummyList);
+
+		if(!Inventory.getAllParts().isEmpty()) {
+			partSearchProductTable.setItems(Inventory.getAllParts());
+		}
 		
 		partSearchIdCol.setCellValueFactory(new PropertyValueFactory<>("Id"));
 		partSearchNameCol.setCellValueFactory(new PropertyValueFactory<>("Name"));
