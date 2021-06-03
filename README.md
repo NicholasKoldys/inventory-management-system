@@ -28,16 +28,22 @@ Open the project directory "inventory-management-system" in a command line inter
 ```
 mvn clean javafx:run
 ```
-For more information, please read "[How to initially build this project](how-to-build.md)".
+For more information, please read "[How to initially build this project](project-documents\how-to-build.md)".
 
 <br />
 
 ### Interested in the build process
 Please follow the link:
-[How to initially build this project](how-to-build.md)
+[How to initially build this project](project-documents\how-to-build.md)
 
 <br />
 
 ### Interested in the repository's structure
 Please follow the link:
-[How this project was created](how-to-create.md)
+[How this project was created](project-documents\how-to-create.md)
+
+<br />
+
+### Application's GUI mock-up
+Please follow the link:
+[GUI Mock-up](project-documents\gui-mockup.md)
