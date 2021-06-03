@@ -47,3 +47,9 @@ Please follow the link:
 ### Application's GUI mock-up
 Please follow the link:
 [GUI Mock-up](project-documents\gui-mockup.md)
+
+<br />
+
+### Application's UML Class Diagram
+Please follow the link:
+[UML Class Diagram](project-documents\uml-class-diagram.pdf)
