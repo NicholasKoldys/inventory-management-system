@@ -15,9 +15,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 
-/* TODO TEMP */
-import javafx.scene.*;
-
 import javafx.scene.Parent;
 import javafx.scene.control.*; // contains button and label
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -123,9 +120,7 @@ public class MainSceneController implements Initializable {
 	*/
 	
 	private void setupModifyScene(Object partOrProduct) throws IOException {
-		
-		Parent root;
-		
+
 		if (partOrProduct.getClass().toString().contains("InHouse") 
 				|| partOrProduct.getClass().toString().contains("Outsourced")) {
 
