@@ -5,7 +5,7 @@ mvn "archetype:generate" "-D groupId=dev.nicholaskoldys.inventory_managment_syst
 git init
 ```
 ```
-git remote add oririn <repolink>
+git remote add origin <repolink>
 ```
 ```
 git remote -v 
